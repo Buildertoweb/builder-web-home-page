@@ -1,6 +1,13 @@
 
 import React from 'react';
 import { Star } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export const Testimonials = () => {
   const testimonials = [
@@ -24,8 +31,56 @@ export const Testimonials = () => {
       title: "Founder",
       company: "Wellness Studio",
       stars: 5
+    },
+    {
+      quote: "BuilderToWeb's customer support is exceptional. Any time I had a question, they were quick to respond with helpful solutions.",
+      name: "David Rodriguez",
+      title: "CEO",
+      company: "InnoTech Solutions",
+      stars: 5
+    },
+    {
+      quote: "I was able to create a fully functioning e-commerce site in days instead of months. The platform's simplicity is its greatest strength.",
+      name: "Emma Thompson",
+      title: "Online Store Owner",
+      company: "Rustic Home Goods",
+      stars: 5
+    },
+    {
+      quote: "The SEO tools integrated into BuilderToWeb helped us achieve first page rankings within weeks of launching our new site.",
+      name: "Robert Clark",
+      title: "Digital Marketing Specialist",
+      company: "OptimizeNow",
+      stars: 5
+    },
+    {
+      quote: "We've tried many website builders before, but none compare to the flexibility and professional results we get with BuilderToWeb.",
+      name: "Sophia Kim",
+      title: "Creative Director",
+      company: "Design Collective",
+      stars: 5
     }
   ];
+
+  const TestimonialCard = ({ testimonial }: { testimonial: typeof testimonials[0] }) => (
+    <div className="bg-gray-900 p-8 rounded-xl border border-gray-800 shadow-md h-full flex flex-col">
+      <div className="flex mb-4">
+        {[...Array(testimonial.stars)].map((_, i) => (
+          <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+        ))}
+      </div>
+      <blockquote className="text-lg text-gray-300 mb-6 flex-grow">"{testimonial.quote}"</blockquote>
+      <div className="flex items-center">
+        <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-medium text-lg">
+          {testimonial.name.charAt(0)}
+        </div>
+        <div className="ml-4">
+          <div className="font-semibold text-white">{testimonial.name}</div>
+          <div className="text-sm text-gray-400">{testimonial.title}, {testimonial.company}</div>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <section id="testimonials" className="py-20 bg-black">
@@ -37,26 +92,20 @@ export const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-gray-900 p-8 rounded-xl border border-gray-800 shadow-md">
-              <div className="flex mb-4">
-                {[...Array(testimonial.stars)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <blockquote className="text-lg text-gray-300 mb-6">"{testimonial.quote}"</blockquote>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-medium text-lg">
-                  {testimonial.name.charAt(0)}
-                </div>
-                <div className="ml-4">
-                  <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-sm text-gray-400">{testimonial.title}, {testimonial.company}</div>
-                </div>
-              </div>
+        <div className="mb-16">
+          <Carousel className="w-full">
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <TestimonialCard testimonial={testimonial} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="mt-8 flex justify-center gap-4">
+              <CarouselPrevious className="relative static left-auto transform-none" />
+              <CarouselNext className="relative static right-auto transform-none" />
             </div>
-          ))}
+          </Carousel>
         </div>
 
         <div className="mt-16 bg-gray-900 rounded-2xl p-8 md:p-12">
