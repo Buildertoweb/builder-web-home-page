@@ -1,8 +1,30 @@
 
 import React from 'react';
-import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Card, CardContent } from '@/components/ui/card';
 
 export const Footer = () => {
+  const products = [
+    {
+      title: "Landing Page",
+      description: "Create impactful first impressions with professionally designed landing pages. Perfect for promotions, events, product launches, and lead generation. Our custom designs combine eye-catching visuals with compelling messaging for maximum conversion rates and business growth.",
+      price: "200 AED",
+      image: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=1470&auto=format&fit=crop"
+    },
+    {
+      title: "Freelancer Website",
+      description: "Showcase your professional skills and expertise with a custom website designed specifically for freelancers. Whether you're a designer, writer, developer, or consultant, our SEO-optimized websites help you stand out in a competitive market. Build your personal brand and attract more clients.",
+      price: "450 AED",
+      image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=1470&auto=format&fit=crop"
+    },
+    {
+      title: "Restaurant Website",
+      description: "Bring your restaurant online with a stunning website that attracts customers and boosts reservations. Our restaurant websites are tailored to showcase your menu, location, and special offers in an engaging way. Increase foot traffic and online orders with mobile-friendly, visually appealing designs.",
+      price: "850 AED",
+      image: "https://images.unsplash.com/photo-1514326640560-7d063ef2aed5?q=80&w=1470&auto=format&fit=crop"
+    }
+  ];
+
   return (
     <footer className="bg-gray-950 text-white pt-16 pb-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,19 +36,33 @@ export const Footer = () => {
             <p className="text-gray-400 mb-6 max-w-md">
               Transform your ideas into beautiful websites without writing a single line of code.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin className="h-5 w-5" />
-              </a>
+            <h3 className="text-lg font-semibold mb-4 text-white">Our Digital Products</h3>
+            <div className="grid grid-cols-1 gap-4">
+              {products.map((product, index) => (
+                <Card key={index} className="bg-gray-900 border-gray-800 overflow-hidden">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div className="sm:col-span-1 relative">
+                      <AspectRatio ratio={16/9}>
+                        <img 
+                          src={product.image} 
+                          alt={`${product.title} - Professional web design service`} 
+                          className="object-cover w-full h-full rounded-l-lg"
+                        />
+                      </AspectRatio>
+                    </div>
+                    <div className="sm:col-span-2 p-4">
+                      <h4 className="font-bold text-white mb-2">{product.title}</h4>
+                      <p className="text-sm text-gray-400 mb-2">{product.description}</p>
+                      <div className="flex justify-between items-center mt-2">
+                        <span className="text-lg font-semibold text-blue-400">{product.price}</span>
+                        <a href="#" className="text-sm bg-blue-600 hover:bg-blue-700 text-white py-1 px-3 rounded-md transition-colors">
+                          Learn More
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              ))}
             </div>
           </div>
           <div>
