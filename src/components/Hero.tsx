@@ -13,7 +13,7 @@ export const Hero = () => {
               Transform your ideas into beautiful websites
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-lg">
-              BuilderToWeb helps you build stunning web experiences without coding. Launch your website faster with our intuitive platform.
+              BuilderToWeb helps you build stunning web experiences with expert craftsmanship. Launch your website faster with our intuitive platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 

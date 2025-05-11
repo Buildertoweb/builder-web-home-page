@@ -12,7 +12,7 @@ export const Features = () => {
     {
       icon: <Settings className="h-8 w-8 text-blue-400" />,
       title: "Easy Customization",
-      description: "Customize every aspect of your website without writing a single line of code."
+      description: "Customize every aspect of your website with professional tools and expert guidance."
     },
     {
       icon: <Star className="h-8 w-8 text-blue-400" />,
@@ -32,7 +32,7 @@ export const Features = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Powerful features to build your perfect website</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Everything you need to create professional websites without writing code
+            Everything you need to create professional websites with expert craftsmanship
           </p>
         </div>
 
@@ -61,12 +61,12 @@ export const Features = () => {
               />
             </div>
             <div className="md:w-1/2 md:pl-12">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">Intuitive drag-and-drop interface</h3>
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">Intuitive visual interface</h3>
               <p className="text-lg text-gray-300 mb-6">
-                Our visual editor makes website building accessible to everyone. Just drag, drop, and publish - it's that simple.
+                Our visual editor makes website building accessible to everyone. Just design, review, and publish - it's that simple.
               </p>
               <ul className="space-y-3">
-                {['No coding required', 'Real-time preview', 'Pre-built components', 'Save and reuse sections'].map((item, i) => (
+                {['Professional-grade tools', 'Real-time preview', 'Pre-built components', 'Save and reuse sections'].map((item, i) => (
                   <li key={i} className="flex items-center">
                     <span className="bg-blue-900/30 text-blue-400 p-1 rounded-full mr-3">
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">

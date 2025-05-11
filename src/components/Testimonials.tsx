@@ -12,7 +12,7 @@ export const Testimonials = () => {
       stars: 5
     },
     {
-      quote: "As someone with zero coding experience, I never thought I could create a professional website. BuilderToWeb made it not just possible, but enjoyable.",
+      quote: "As someone with limited technical background, I never thought I could create a professional website. BuilderToWeb made it not just possible, but enjoyable.",
       name: "Michael Chen",
       title: "Small Business Owner",
       company: "Artisan Coffee",
@@ -62,15 +62,34 @@ export const Testimonials = () => {
         <div className="mt-16 bg-gray-900 rounded-2xl p-8 md:p-12">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="mb-8 md:mb-0 md:mr-8 text-center md:text-left">
-              <div className="text-blue-400 font-semibold mb-2">TRUSTED BY BUSINESSES</div>
-              <h3 className="text-2xl md:text-3xl font-bold text-white">Join over 10,000+ companies using BuilderToWeb</h3>
+              <div className="text-blue-400 font-semibold mb-2">ELEVATE YOUR WEB PRESENCE</div>
+              <h3 className="text-2xl md:text-3xl font-bold text-white">Join the professionals who trust BuilderToWeb</h3>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {['Brand 1', 'Brand 2', 'Brand 3', 'Brand 4'].map((brand, i) => (
-                <div key={i} className="h-12 bg-gray-800/50 rounded flex items-center justify-center px-6">
-                  <span className="text-gray-400 font-semibold">{brand}</span>
+              <div className="h-16 bg-gray-800/50 rounded-lg flex items-center justify-center px-4">
+                <div className="w-10 h-10 bg-blue-500/20 rounded-full flex items-center justify-center">
+                  <span className="font-bold text-blue-400">98%</span>
                 </div>
-              ))}
+                <span className="ml-3 text-white text-sm">Customer<br/>Satisfaction</span>
+              </div>
+              <div className="h-16 bg-gray-800/50 rounded-lg flex items-center justify-center px-4">
+                <div className="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center">
+                  <span className="font-bold text-purple-400">24/7</span>
+                </div>
+                <span className="ml-3 text-white text-sm">Expert<br/>Support</span>
+              </div>
+              <div className="h-16 bg-gray-800/50 rounded-lg flex items-center justify-center px-4">
+                <div className="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center">
+                  <span className="font-bold text-green-400">7+</span>
+                </div>
+                <span className="ml-3 text-white text-sm">Years<br/>Experience</span>
+              </div>
+              <div className="h-16 bg-gray-800/50 rounded-lg flex items-center justify-center px-4">
+                <div className="w-10 h-10 bg-yellow-500/20 rounded-full flex items-center justify-center">
+                  <span className="font-bold text-yellow-400">500+</span>
+                </div>
+                <span className="ml-3 text-white text-sm">Projects<br/>Delivered</span>
+              </div>
             </div>
           </div>
         </div>
