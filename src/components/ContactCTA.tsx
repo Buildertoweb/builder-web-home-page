@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 
 export const ContactCTA = () => {
   return (
-    <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+    <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -16,7 +16,7 @@ export const ContactCTA = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button 
-              className="bg-white text-blue-600 hover:bg-blue-50 text-lg py-6 px-8"
+              className="bg-white text-blue-900 hover:bg-blue-100 text-lg py-6 px-8"
               size="lg"
             >
               Start Your Free Trial 
