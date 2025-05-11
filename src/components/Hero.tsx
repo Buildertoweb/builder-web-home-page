@@ -23,13 +23,6 @@ export const Hero = () => {
                 Start Building 
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button 
-                variant="outline" 
-                className="border-blue-400 text-blue-400 hover:bg-blue-900/20 text-lg py-6 px-8"
-                size="lg"
-              >
-                Watch Demo
-              </Button>
             </div>
           </div>
           <div className="lg:w-1/2 relative">
