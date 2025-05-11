@@ -19,7 +19,7 @@ export const ContactCTA = () => {
               className="bg-white text-blue-900 hover:bg-blue-100 text-lg py-6 px-8"
               size="lg"
             >
-              Start Your Free Trial 
+              Contact Us Now 
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button 
@@ -30,9 +30,6 @@ export const ContactCTA = () => {
               Schedule a Demo
             </Button>
           </div>
-          <p className="mt-6 text-sm opacity-80">
-            No credit card required. 14-day free trial.
-          </p>
         </div>
       </div>
     </section>
