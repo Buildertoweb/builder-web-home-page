@@ -1,7 +1,6 @@
-
 import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,16 +15,6 @@ export const Navbar = () => {
                 BuilderToWeb
               </span>
             </a>
-          </div>
-
-          {/* Desktop buttons */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" className="border-blue-400 text-blue-400 hover:bg-blue-900/20">
-              Log in
-            </Button>
-            <Button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600">
-              Get Started
-            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -43,16 +32,10 @@ export const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu - empty now */}
       {isMenuOpen && (
         <div className="md:hidden bg-gray-900 border-t border-gray-800 px-4 py-2">
           <div className="flex flex-col space-y-4 py-4">
-            <Button variant="outline" className="border-blue-400 text-blue-400 justify-start">
-              Log in
-            </Button>
-            <Button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white justify-start">
-              Get Started
-            </Button>
           </div>
         </div>
       )}
