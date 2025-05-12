@@ -18,11 +18,8 @@ export const Navbar = () => {
             </a>
           </div>
 
-          {/* Desktop menu */}
-          <div className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-gray-300 hover:text-blue-400 transition-colors">Features</a>
-            <a href="#process" className="text-gray-300 hover:text-blue-400 transition-colors">How it works</a>
-            <a href="#testimonials" className="text-gray-300 hover:text-blue-400 transition-colors">Testimonials</a>
+          {/* Desktop buttons */}
+          <div className="hidden md:flex items-center space-x-4">
             <Button variant="outline" className="border-blue-400 text-blue-400 hover:bg-blue-900/20">
               Log in
             </Button>
@@ -50,15 +47,6 @@ export const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-gray-900 border-t border-gray-800 px-4 py-2">
           <div className="flex flex-col space-y-4 py-4">
-            <a href="#features" className="text-gray-300 hover:text-blue-400 transition-colors px-2 py-2 rounded-md">
-              Features
-            </a>
-            <a href="#process" className="text-gray-300 hover:text-blue-400 transition-colors px-2 py-2 rounded-md">
-              How it works
-            </a>
-            <a href="#testimonials" className="text-gray-300 hover:text-blue-400 transition-colors px-2 py-2 rounded-md">
-              Testimonials
-            </a>
             <Button variant="outline" className="border-blue-400 text-blue-400 justify-start">
               Log in
             </Button>
